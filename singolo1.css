@@ -105,7 +105,7 @@ ul li .red:hover {
   align-items: center;
 }
 .pointer-left {
-  height: 594;
+  height: 594px;
   padding: 0 10px;
   grid-column: 1/2;
   display: flex;
@@ -113,7 +113,7 @@ ul li .red:hover {
   align-items: center;
 }
 .pointer-right {
-  height: 594;
+  height: 594px;
   padding: 0 10px;
   grid-column: 12/-1;
   display: flex;
@@ -142,7 +142,7 @@ ul li .red:hover {
 }
 .title {
   width: 100%;
-  height: 85px;
+  height: 89px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -166,7 +166,7 @@ h1 {
 }
 .options {
   width: 100%;
-  height: 274px;
+  height: 275px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
   grid-template-rows: repeat(2, 123px);
