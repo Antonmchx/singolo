@@ -51,6 +51,7 @@ li a {
   font-size: 12px;
   color: #767e9e;
   text-decoration: none;
+  background-color: #2d303a;
   padding: 3px 7px;
   margin-right: 10px;
   border: #767e9e 1px solid;
@@ -59,6 +60,9 @@ li a {
 .marked {
   color: #dedede;
   border: #dedede 1px solid;
+}
+.tag {
+  transition: background-color 0.3s ease-in;
 }
 .tag:hover {
   background-color: #f2f2f2;
@@ -78,17 +82,7 @@ li a {
   padding: 18px 10px 2px 10px;
   overflow: hidden;
 }
-.img-box {
-  width: 100%;
-  overflow: hidden;
-}
-#five {
-  transform: translate(-10px, -15px);
-  transition: transform 0.6s ease;
-}
-#five:hover {
-  transform: translateY(-10px);
-}
+
 .sub-one {
   background-color: #323746;
 }
@@ -148,11 +142,13 @@ span {
   height: 32px;
   border: 1px solid #666d89;
   border-radius: 50%;
+  background-color: #f2f2f2;
   margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: background-color 0.3s ease-in;
 }
 .icon-block:hover {
   background-color: #2d303a;
