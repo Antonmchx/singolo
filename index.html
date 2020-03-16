@@ -9,24 +9,26 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="singolo-1">
+      <section class="singolo-1" id="top">
         <div class="header-one">
-          <div class="logo-box">
-            <p>SINGOLO</p>
-            <p class="red">*</p>
-          </div>
-          <div class="navbar">
-            <ul>
-              <li><a class="red" href="#">HOME</a></li>
-              <li><div class="dot"></div></li>
-              <li><a href="#">SERVICES</a></li>
-              <li><div class="dot"></div></li>
-              <li><a href="#">PORTFOLIO</a></li>
-              <li><div class="dot"></div></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><div class="dot"></div></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
+          <div class="header-content">
+            <div class="logo-box">
+              <p>SINGOLO</p>
+              <p class="red">*</p>
+            </div>
+            <div class="navbar">
+              <ul class="menu">
+                <li><a class="red" href="#top">HOME</a></li>
+                <li><div class="dot"></div></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><div class="dot"></div></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><div class="dot"></div></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><div class="dot"></div></li>
+                <li><a href="#contacts">CONTACT</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="sub-box-1 sub-box"></div>
@@ -36,14 +38,30 @@
               ><img src="./assets/point-left.png" alt="pointer-left" width="16"
             /></a>
           </div>
-          <div class="images">
-            <img src="./assets/phone-v.png" alt="iphone_vertical" width="240" />
-            <img
-              src="./assets/phone-h.png"
-              alt="iphone_horizontal"
-              width="483"
-            />
+          <div class="slide active">
+            <div class="phones">
+              <div class="vertical">
+                <img src="assets/v-blank.png" alt="vertical phone image" />
+                <img
+                  src="assets/v-display.png"
+                  alt="vertical display"
+                  id="display-v"
+                />
+              </div>
+              <div class="horizontal">
+                <img src="assets/h-blank.png" alt="horizontal phone image" />
+                <img
+                  src="assets/h-display.png"
+                  alt="h-display"
+                  id="display-h"
+                />
+              </div>
+            </div>
           </div>
+          <div class="slide" style="background-color: darkblue;">
+            <img src="assets/Slide-2.png" alt="Slide-2" />
+          </div>
+
           <div class="pointer-right">
             <a href="#"
               ><img
@@ -54,7 +72,7 @@
           </div>
         </div>
         <div class="sub-box-2 sub-box"></div>
-        <div class="services">
+        <div class="services" id="services">
           <div class="service-title">
             <h1 class="h1-s1">Our Services</h1>
           </div>
@@ -144,7 +162,7 @@
         <div class="sub-box-3 sub-box"></div>
       </section>
       <section class="singolo-2">
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="header-2">
             <h1>Portfolio</h1>
             <p>
@@ -152,10 +170,10 @@
               eget lacinia odio sem nec elit.
             </p>
             <ul class="tags">
-              <li><a class="marked" href="#">All</a></li>
-              <li><a href="#" class="tag">WebDesign</a></li>
-              <li><a href="#" class="tag">GraphicDesign</a></li>
-              <li><a href="#" class="tag">Artwork</a></li>
+              <li><a class="marked" href="#portfolio">All</a></li>
+              <li><a href="#portfolio" class="tag">WebDesign</a></li>
+              <li><a href="#portfolio" class="tag">GraphicDesign</a></li>
+              <li><a href="#portfolio" class="tag">Artwork</a></li>
             </ul>
           </div>
           <div class="images-gal">
@@ -198,7 +216,7 @@
           </div>
         </section>
         <div class="sub-box-4 sub-box"></div>
-        <section class="about">
+        <section class="about" id="about">
           <div class="text">
             <h1>About Us</h1>
             <p>
@@ -279,7 +297,7 @@
         </section>
         <div class="sub-box-5 sub-box"></div>
       </section>
-      <section class="singolo-3">
+      <section class="singolo-3" id="contacts">
         <div class="header-3">
           <h1>Get a Quote</h1>
           <p>
@@ -303,13 +321,27 @@
               placeholder="Email (Required)"
               required
             />
-            <input type="text" name="subject" placeholder="Subject" />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              id="subject"
+            />
             <textarea
               name="description"
               placeholder="Describe your project in details..."
+              id="describe"
             ></textarea>
-            <button type="submit" name="submit">Submit</button>
+            <button type="submit" name="submit" id="btn">Submit</button>
           </form>
+          <div id="message-block" class="hidden">
+            <div id="message">
+              <p>Письмо отправлено</p>
+              <p id="sub-result"></p>
+              <p id="describe-result"></p>
+              <button id="ok-btn">OK</button>
+            </div>
+          </div>
           <div class="contact-info">
             <h2>Contact Information</h2>
             <p>
@@ -362,5 +394,6 @@
         </footer>
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
