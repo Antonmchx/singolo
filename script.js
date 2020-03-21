@@ -2,8 +2,6 @@ const button = document.getElementById("btn");
 const ok_button = document.getElementById("ok-btn");
 const menu = document.querySelector(".menu");
 let slides = document.querySelectorAll(".slide");
-let array = document.querySelectorAll(".pic");
-let tag = document.querySelector(".tag");
 
 // form actions
 
@@ -82,4 +80,31 @@ document.querySelector(".pointer-right").addEventListener("click", function() {
   if (enabled) {
     nextSlide(currentSlide);
   }
+});
+
+//portfolio
+
+let tags = document.querySelectorAll(".tag");
+const portfolio = document.querySelector(".images-gal");
+
+// Shift portfolio pictures by clicking on tag
+tags.forEach(tag =>
+  tag.addEventListener("click", event => {
+    // Prevent selected tag from click action
+    if (!event.target.classList.contains("marked")) {
+      let portfolioPics = [...portfolio.querySelectorAll(".pic-box")];
+      portfolioPics.unshift(portfolioPics.pop());
+      portfolioPics.forEach(pic => portfolio.append(pic));
+    }
+    tags.forEach(t => t.classList.remove("marked"));
+    event.target.classList.add("marked");
+  })
+);
+
+let pics = document.querySelectorAll(".pic");
+pics.forEach(pic => {
+  pic.addEventListener("click", event => {
+    pics.forEach(p => p.classList.remove("border"));
+    event.target.classList.add("border");
+  });
 });
